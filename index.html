@@ -145,17 +145,21 @@
     <div id="common-footer"></div>
 
     <script>
-    fetch("common.html")
-      .then(res => res.text())
-      .then(data => {
-        const temp = document.createElement("div");
-        temp.innerHTML = data;
-        document.getElementById("common-header").innerHTML =
-          temp.querySelector("header").outerHTML;
-        document.getElementById("common-footer").innerHTML =
-          temp.querySelector("footer").outerHTML;
-      })
-      .catch(err => console.error("common.html の読み込みに失敗:", err));
-  </script>
+        fetch("../common.html") // pages フォルダなら "../common.html" 、index.html なら "common.html"
+        .then(res => res.text())
+        .then(data => {
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+
+            // header を安全に取得
+            const header = temp.querySelector("header");
+            if (header) document.getElementById("common-header").innerHTML = header.outerHTML;
+
+            // footer を安全に取得
+            const footer = temp.querySelector("footer");
+            if (footer) document.getElementById("common-footer").innerHTML = footer.outerHTML;
+        })
+        .catch(err => console.error("common.html の読み込みに失敗:", err));
+    </script>
 </body>
 </html>
