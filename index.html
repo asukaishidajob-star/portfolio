@@ -148,5 +148,19 @@
         <p class="email">E-mail: info@studioeuno.kr</p>
         <p class="open">OPEN: MON–SUN 10AM–7PM</p>
     </footer>
+
+    <script>
+    fetch("../common.html")
+      .then(res => res.text())
+      .then(data => {
+        const temp = document.createElement("div");
+        temp.innerHTML = data;
+        document.getElementById("common-header").innerHTML =
+          temp.querySelector("header").outerHTML;
+        document.getElementById("common-footer").innerHTML =
+          temp.querySelector("footer").outerHTML;
+      })
+      .catch(err => console.error("common.html の読み込みに失敗:", err));
+  </script>
 </body>
 </html>
