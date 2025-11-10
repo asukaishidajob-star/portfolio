@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio EUNO</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/exhibition.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="common-header"></div>
+  <main>
+    <div class="main_box">
+        <nav>
+            <ol class="breadcrumb">
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="./showcase.html">Exhibition / Event</a></li>
+                <li>現在のページ</li>
+            </ol>
+        </nav>
+          <div class="content">
+              <img src="../img/exhibition2.png" alt="">
+              <div class="partition"></div>
+              <div class="text_wrapper">
+                  <h1 class="content_title">【開催中】「光と土」</h1>
+                  <p>ハラダ ナオ（Nao Harada）</p>
+                  <p class="content_text">ハラダ ナオ（Nao Harada）の展示「光と土」では、陶土と光という二つの素材を通じて、手が生み出す形と空間の関係を探ります。<br>
+
+                  ハラダ ナオは、土を丁寧にこね、形を育む過程の中で、光が差し込むことで表面に微細な陰影や色の変化が生まれる瞬間を捉えます。その作品は、手の跡や土の質感を通して、時間の流れや制作の痕跡を静かに伝えます。<br>
+
+                  観る者は、陶器の曲線や質感に触れなくとも、光に照らされた表情の変化や、土の温かみがもたらす空間の柔らかさを感じるでしょう。光と土が交わることで、形は単なる物理的な存在を超え、空間に呼吸するかのような存在感を宿します。<br>
+
+                  この展示を通して、観る者は陶器を媒介に、物理的な空間だけでなく、制作の手触りや時間、光の移ろいといった目に見えない感覚に触れることができます。ハラダ ナオが土に刻む手の動きと、光によって生まれる表情は、日常を離れたひとときの中で、静かで豊かな体験をもたらすでしょう。</p>
+                  <p class="sub_title">期間</p>
+                  <p class="sub_content">22025/09/10(WED) ~ 2025/12/15(MON)</p>
+                  <p class="sub_title">場所</p>
+                  <p class="sub_content">Studio EUNO 2F 빛의 방</p>
+                  <p class="sub_title">料金</p>
+                  <p class="sub_content">一般・大学生：2,000 円<br>高校生：1,500 円<br>シニア（65〜75歳以上）：1,500円<br>中学生以下：無料</p>
+                  <p class="sub_title">主催</p>
+                  <p class="sub_content">아카리陶房</p>
+              </div>
+          </div>
+          <div class="sub_img">
+              <img src="../img/exhibition3.jpg" alt="">
+              <img src="../img/exhibition5.png" alt="">
+          </div>
+      </div>
+  </main>
+
+  <div id="common-footer"></div>
+
+  <script>
+    fetch("../common.html")
+      .then(res => res.text())
+      .then(data => {
+        const temp = document.createElement("div");
+        temp.innerHTML = data;
+        document.getElementById("common-header").innerHTML =
+          temp.querySelector("header").outerHTML;
+        document.getElementById("common-footer").innerHTML =
+          temp.querySelector("footer").outerHTML;
+      })
+      .catch(err => console.error("common.html の読み込みに失敗:", err));
+  </script>
+</body>
+</html>

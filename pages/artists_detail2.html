@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio EUNO</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/artist_detail.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="common-header"></div>
+  <main>
+    <nav>
+        <ol class="breadcrumb">
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="./artists.html">Artists</a></li>
+            <li>現在のページ</li>
+        </ol>
+    </nav>
+    <h1>Choi Jian – 최지안</h1>
+    <div class="design">
+        <img src="../img/design2.jpg" alt="">
+    </div>
+    <div class="career">
+        <ul class="career_list">
+            <li><strong>2007年：</strong> 「움직임의 그림자（動きの影）」展（ノヘン・アートスペース）参加</li>
+            <li><strong>&nbsp;</strong> 「하늘의 선（空の線）」プロジェクト参加（ハンリョン彫刻連盟）</li>
+
+            <li><strong>2008年：</strong> 初個展「조용한 파편（静かな断片）」開催（ミリュン・アートホール）</li>
+            <li><strong>&nbsp;</strong> ミリュン現代彫刻奨励賞 受賞</li>
+
+            <li><strong>2009年：</strong> 「흐름과 구조（流れと構造）」グループ展（ノヘン・ギャラリーリム）</li>
+            <li><strong>&nbsp;</strong> アートコレクティブ「N.O.V.A」結成、共同制作を開始</li>
+
+            <li><strong>2010年：</strong> 「빛의 흔적（光の痕跡）」個展（モウォン・コンテンポラリー）</li>
+            <li><strong>&nbsp;</strong> 金属と樹脂を組み合わせた新シリーズ「Resonance Forms」発表</li>
+
+            <li><strong>2011年：</strong> ルオ国際アートプロジェクト参加「공간의 의미（空間の意味）」</li>
+
+            <li><strong>2012年：</strong> 「기억의 표면（記憶の表面）」展（モウォン・セランギャラリー）</li>
+            <li><strong>&nbsp;</strong> ノヘン美術館 企画展示「Constructed Silence」参加</li>
+
+            <li><strong>2013年：</strong> 大規模インスタレーション「벽의 언어（壁の言語）」を発表（ルオ・アートパーク）</li>
+
+            <li><strong>2014年：</strong> ハンリョン現代芸術賞 受賞</li>
+
+            <li><strong>2015年：</strong> 「시간의 틈（時間の隙間）」シリーズ制作開始</li>
+            <li><strong>&nbsp;</strong>「흔들리는 경계（揺らめく境界）」展（ミリュン・デザインホール）出展</li>
+
+            <li><strong>2016年：</strong> モウォン国際アートフェスティバル 招待作家</li>
+            <li><strong>&nbsp;</strong>「불완전한 형태（不完全な形）」展 共同展示（ノヘン・文化空間ウィル）</li>
+
+            <li><strong>2017年：</strong> 大型屋外作品「Layered Breath」設置（ハンリョン市文化広場）</li>
+
+            <li><strong>2018年：</strong> 個展「Echo Form」開催（モウォン・セランギャラリー）</li>
+
+            <li><strong>2019年：</strong> 「都市の記憶」展（ノヘン現代美術館）参加</li>
+
+            <li><strong>2020年：</strong> Studio EUNO にて作品発表「기억의 층（記憶の層）」</li>
+            <li><strong>&nbsp;</strong>架空国ルオ共和国にてレジデンス参加（Luo Sculpture Residency）</li>
+
+            <li><strong>2021年：</strong> 「Silence in Motion」展（ルオ・コンテンポラリー）</li>
+            <li><strong>&nbsp;</strong>ノヘン国際アートフェア 審査員特別賞 受賞</li>
+
+            <li><strong>2022年：</strong> 個展「시간의 틈 사이에서（時間の隙間の中で）」開催（モウォン・セランギャラリー）</li>
+
+            <li><strong>2023年：</strong> 「Reconstruction of Silence」展（ルオ現代芸術センター）</li>
+            <li><strong>&nbsp;</strong>大型作品「Fractured Light」制作</li>
+
+            <li><strong>2024年：</strong> Studio EUNO 特別展示「빛의 밀도（光の密度）」出展</li>
+            <li><strong>&nbsp;</strong>映像作品「Horizon of Breath」発表（EUNO Screen）</li>
+
+            <li><strong>2025年：</strong> 個展「숨의 파동（呼吸の波動）」開催（Studio EUNO 2F／ソウル特別市・麻浦区）</li>
+        </ul>
+    </div>
+  </main>
+
+  <div id="common-footer"></div>
+
+  <script>
+    fetch("../common.html")
+      .then(res => res.text())
+      .then(data => {
+        const temp = document.createElement("div");
+        temp.innerHTML = data;
+        document.getElementById("common-header").innerHTML =
+          temp.querySelector("header").outerHTML;
+        document.getElementById("common-footer").innerHTML =
+          temp.querySelector("footer").outerHTML;
+      })
+      .catch(err => console.error("common.html の読み込みに失敗:", err));
+  </script>
+</body>
+</html>

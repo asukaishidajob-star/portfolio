@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+main {
+    background: linear-gradient(
+        to top, 
+        #FCFBFA 0%,      /* 上端の明るい色 */
+        #EDE6DD 50%,     /* 中間の柔らかい色 */
+        #F8F6F3 100%     /* 下端を少し濃く */
+    );
+    padding: 3em 2em;       /* 上下左右の余白を確保 */
+    box-sizing: border-box; /* 内側余白を正しく計算 */
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 12px;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+  content: "›";
+  margin: 0 .6em; /* 記号の左右の余白 */
+  color: #777; /* 記号の色 */
+}
+
+main h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 50px;
+}
+
+.main_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist_box {
+    padding: 25px;
+    border: 1px solid;
+    border-color: #bfbfbf;
+    margin: 20px 20px;
+    width: 30%;
+    font-family: 'Noto Serif KR', serif;
+    background: #FFF;
+}
+
+.artist_box:hover {
+    background: #f5efe9;
+}

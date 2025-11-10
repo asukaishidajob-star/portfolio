@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 12px;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+  content: "›";
+  margin: 0 .6em; /* 記号の左右の余白 */
+  color: #777; /* 記号の色 */
+}
+
+.main_box {
+    /* 上から下に向かう淡いベージュ系グラデーション */
+    background: linear-gradient(
+        to top, 
+        #FCFBFA 0%,      /* 上端の明るい色 */
+        #EDE6DD 50%,     /* 中間の柔らかい色 */
+        #F8F6F3 100%     /* 下端を少し濃く */
+    );
+    padding: 3em 2em;       /* 上下左右の余白を確保 */
+    box-sizing: border-box; /* 内側余白を正しく計算 */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    gap: 2em;
+}
+
+.text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1; 
+    align-items: center;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.partition {
+    width: 0.5px;
+    background-color: #000;
+    margin: 0 1em;
+    align-self: stretch; 
+}
+
+.content img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.content h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: normal;
+}
+
+.content_text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 14px;
+    width: 90%;
+    line-height: 20px;
+}
+
+.content_title,
+.content_text {
+    background: transparent; /* 背景はなし */
+    backdrop-filter: blur(5px);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+.sub_title {
+    background-color: #000;
+    color: #FFF;
+    width: 60px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.sub_content {
+    font-size: 14px;
+    font-family: 'Noto Serif KR', serif;
+    line-height: 25px;
+}
+
+.sub_img img {
+    width: 15%;       /* 幅を20% → 15% に縮小 */
+    margin: 0 10px;   /* 左右10pxずつ余白に変更 */
+    height: auto; 
+}
+
+.sub_img img {
+    width: 200px;
+    height: 200px; 
+    margin-left: 60px;
+}

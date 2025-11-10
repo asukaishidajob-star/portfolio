@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.main_box h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 50px;
+}
+
+.main_box {
+    /* 上から下に向かう淡いベージュ系グラデーション */
+    background: linear-gradient(
+        to top, 
+        #FCFBFA 0%,      /* 上端の明るい色 */
+        #EDE6DD 50%,     /* 中間の柔らかい色 */
+        #F8F6F3 100%     /* 下端を少し濃く */
+    );
+    padding: 3em 2em;       /* 上下左右の余白を確保 */
+    box-sizing: border-box; /* 内側余白を正しく計算 */
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 12px;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+  content: "›";
+  margin: 0 .6em; /* 記号の左右の余白 */
+  color: #777; /* 記号の色 */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 2em;
+}
+
+.text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex: 1; 
+    align-items: center;
+}
+
+.partition {
+    width: 0.5px;
+    background-color: #000;
+    margin: 0 1em;
+    align-self: stretch; 
+}
+
+.content img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.content h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: normal;
+}
+
+.content_text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 12px;
+    width: 90%;
+    line-height: 20px;
+}
+
+.content_title,
+.content_text {
+    background: transparent; /* 背景はなし */
+    backdrop-filter: blur(5px);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+

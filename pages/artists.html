@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio EUNO</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/artists.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="common-header"></div>
+  <main>
+    <nav>
+        <ol class="breadcrumb">
+            <li><a href="../index.html">ホーム</a></li>
+            <li>現在のページ</li>
+        </ol>
+    </nav>
+    <h1>Artists</h1>
+    <div class="main_box">
+        <a class="artist_box" href="./artists_detail.html">
+            <p>Ahn Seojun – 안서준</p>
+        </a>
+        <a class="artist_box" href="./artists_detail2.html">
+            <p>Choi Jian – 최지안</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Emily Carter – Emily Carter</p>
+        </a> 
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Kim Boyeon – 김보연</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Oh Harin – 오하린</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Park Daon – 박다온</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Seo Layun – 서라윤</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Takahashi Aoi – 高橋葵</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>Yoon Jiho – 윤지호</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>準備中</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>準備中</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>準備中</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>準備中</p>
+        </a>
+        <a class="artist_box" href="./artists_detail3.html">
+            <p>準備中</p>
+        </a>      
+    </div>
+  </main>
+
+  <div id="common-footer"></div>
+
+  <script>
+    fetch("../common.html")
+      .then(res => res.text())
+      .then(data => {
+        const temp = document.createElement("div");
+        temp.innerHTML = data;
+        document.getElementById("common-header").innerHTML =
+          temp.querySelector("header").outerHTML;
+        document.getElementById("common-footer").innerHTML =
+          temp.querySelector("footer").outerHTML;
+      })
+      .catch(err => console.error("common.html の読み込みに失敗:", err));
+  </script>
+</body>
+</html>

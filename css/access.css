@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+main {
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;  
+    gap: 0;
+
+    background: linear-gradient(
+        to top, 
+        #FCFBFA 0%,
+        #EDE6DD 50%,
+        #F8F6F3 100%
+    );
+    padding: 3em 2em;
+    box-sizing: border-box;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 12px;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+  content: "›";
+  margin: 0 .6em; /* 記号の左右の余白 */
+  color: #777; /* 記号の色 */
+}
+
+main h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 50px;
+}
+
+.address_Box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    gap: 5em;
+}
+
+.map {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 20px;
+}
+
+.main_access {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: left;
+    max-width: 45%;
+    font-family: 'Noto Serif KR', serif;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.address_text {
+    margin-bottom: 20px;
+}
+
+.address_text p {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
+
+.route {
+    width: 100%;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.route p {
+    text-align: left;
+    width: auto;
+}

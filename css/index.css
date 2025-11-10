@@ -1,0 +1,252 @@
+@charset "uft-8";
+
+.first_view {
+    height: 100vh;
+    height: calc(100vh - 100px);
+    background-image: url(../img/main2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.first_view_text {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 175px;
+    padding-right: 80px;
+    margin-top: 300px;
+    color: #FFF;
+    font-weight: 100;
+}
+
+.first_view_text h1 {
+    font-family: 'Pretendard', 'Noto Sans KR', 'Inter', sans-serif;
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 200;
+}
+
+
+.first_view_text p {
+    font-family: 'Pretendard', 'Noto Sans KR', 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.lead {
+    max-width: 1600px;
+    margin: 60px auto;
+}
+
+.lead p {
+    line-height: 2;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.lead p span[lang="ko"] {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  display: inline-block;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.link_button_area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.link_button {
+    display: inline-block;
+    min-width: 200px;
+    line-height: 40px;
+    font-family: 'Noto Serif KR', serif;
+    border: 1px solid;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.link_button:hover {
+  opacity: 0.6;
+}
+
+.recommended {
+    background-color: #f8f8f8;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+.item_list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.item_list li {
+  flex: 1; /* 均等幅に */
+  text-align: center;
+  max-width: 320px;
+}
+
+.item_list img {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+ .item_list dl {
+    font-family: 'Noto Serif KR', serif;
+}
+
+ .item_list dl dt{
+    margin-bottom: 10px;
+}
+
+.item_list dl dd {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.day_box {
+    margin-top: 20px;
+    background-color: #000;
+    color: #FFF;
+    width: 60px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.day {
+    font-size: 16px;
+    font-family: 'Noto Serif KR', serif;
+    line-height: 20px;
+}
+
+.exhibition {
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+.exhibition h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 50px;
+}
+
+.exhibition_list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.exhibition_list li {
+  flex: 1; /* 均等幅に */
+  text-align: center;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.exhibition_list li a {
+    text-decoration: none;
+}
+
+.exhibition_list li a:hover {
+    text-decoration: underline;
+}
+
+.img_box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.exhibition_list img {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.exhibition_list dl p {
+   font-family: 'Noto Serif KR', serif;
+   font-size: 16px;
+   line-height: 20px;
+}
+
+ .exhibition_list dl {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.main_news {
+    margin-bottom: 50px;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.main_news h1 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 50px;
+}
+
+.news_list {
+    max-width: 1600px;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.news_list li {
+    border-bottom:1px solid #ccc;
+    list-style:none;
+}
+
+.news_list li a {
+    text-decoration:none;
+    display: block;
+    padding: 10px 0;
+}
+
+.news_list li a:hover {
+    background-color:#eeeeee;
+}
+
+.news_list li a span {
+    color: #737373;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.news_list li a p {
+    color: #131313;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
