@@ -145,21 +145,27 @@
     <div id="common-footer"></div>
 
     <script>
-        fetch("../common.html") // pages フォルダなら "../common.html" 、index.html なら "common.html"
+        fetch("../common.html") // pages/about.html から読み込む場合
         .then(res => res.text())
         .then(data => {
             const temp = document.createElement("div");
             temp.innerHTML = data;
 
-            // header を安全に取得
             const header = temp.querySelector("header");
-            if (header) document.getElementById("common-header").innerHTML = header.outerHTML;
+            if (header) {
+                document.getElementById("common-header").innerHTML = header.outerHTML;
 
-            // footer を安全に取得
+                // リンク書き換え
+                document.querySelectorAll("#common-header a").forEach(a => {
+                    const href = a.getAttribute("href");
+                    // "../pages/about.html" のような相対パスは自動で portfolio/pages/... に変換
+                    a.setAttribute("href", href.replace(/^\/|^\.\.\//, ""));
+                });
+            }
+
             const footer = temp.querySelector("footer");
             if (footer) document.getElementById("common-footer").innerHTML = footer.outerHTML;
-        })
-        .catch(err => console.error("common.html の読み込みに失敗:", err));
+        });
     </script>
 </body>
 </html>
